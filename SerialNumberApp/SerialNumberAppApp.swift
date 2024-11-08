@@ -207,6 +207,10 @@ struct SerialNumberListView: View {
     #endif
 }
 
+#Preview {
+    SerialNumberListView()
+}
+
 // Core Data Persistence Controller
 struct PersistenceController {
     static let shared = PersistenceController()

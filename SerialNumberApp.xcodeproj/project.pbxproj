@@ -27,6 +27,7 @@
 		AF49A9472CDD738F008A8EDD /* SN-CSV-Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SN-CSV-Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF49A95D2CDD7390008A8EDD /* SerialNumberAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerialNumberAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF49A9672CDD7390008A8EDD /* SerialNumberAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerialNumberAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7961AF2CDE202600E48D32 /* SN-CSV-GeneratorRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SN-CSV-GeneratorRelease.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		AF49A93E2CDD738F008A8EDD = {
 			isa = PBXGroup;
 			children = (
+				AF7961AF2CDE202600E48D32 /* SN-CSV-GeneratorRelease.entitlements */,
 				AF49A9492CDD738F008A8EDD /* SerialNumberApp */,
 				AF49A9602CDD7390008A8EDD /* SerialNumberAppTests */,
 				AF49A96A2CDD7390008A8EDD /* SerialNumberAppUITests */,
@@ -390,7 +392,7 @@
 		AF49A9722CDD7390008A8EDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon ios";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SerialNumberApp/SerialNumberApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -402,10 +404,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.epfl.SerialNumberApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,22 +424,25 @@
 		AF49A9732CDD7390008A8EDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon ios";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SerialNumberApp/SerialNumberApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "SN-CSV-GeneratorRelease.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SerialNumberApp/Preview Content\"";
 				DEVELOPMENT_TEAM = J8A6UP2TFJ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.epfl.SerialNumberApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
