@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "A_simplified_icon_symbolizing_a_CSV_generator_with_16x16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
@@ -16,6 +17,7 @@
       "size" : "32x32"
     },
     {
+      "filename" : "A_simplified_icon_symbolizing_a_CSV_generator_with_64x64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
@@ -46,6 +48,7 @@
       "size" : "512x512"
     },
     {
+      "filename" : "e09ea908a2b23761385484c5710633071536b5f74372b56c1f9522878076b744.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
