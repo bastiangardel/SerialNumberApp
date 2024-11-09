@@ -36,16 +36,6 @@
 			path = SerialNumberApp;
 			sourceTree = "<group>";
 		};
-		AF49A9602CDD7390008A8EDD /* SerialNumberAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SerialNumberAppTests;
-			sourceTree = "<group>";
-		};
-		AF49A96A2CDD7390008A8EDD /* SerialNumberAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SerialNumberAppUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +68,6 @@
 			children = (
 				AF7961AF2CDE202600E48D32 /* SN-CSV-GeneratorRelease.entitlements */,
 				AF49A9492CDD738F008A8EDD /* SerialNumberApp */,
-				AF49A9602CDD7390008A8EDD /* SerialNumberAppTests */,
-				AF49A96A2CDD7390008A8EDD /* SerialNumberAppUITests */,
 				AF49A9482CDD738F008A8EDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,9 +120,6 @@
 			dependencies = (
 				AF49A95F2CDD7390008A8EDD /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				AF49A9602CDD7390008A8EDD /* SerialNumberAppTests */,
-			);
 			name = SerialNumberAppTests;
 			packageProductDependencies = (
 			);
@@ -154,9 +139,6 @@
 			);
 			dependencies = (
 				AF49A9692CDD7390008A8EDD /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				AF49A96A2CDD7390008A8EDD /* SerialNumberAppUITests */,
 			);
 			name = SerialNumberAppUITests;
 			packageProductDependencies = (
@@ -409,7 +391,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.epfl.SerialNumberApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,7 +424,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.epfl.SerialNumberApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
