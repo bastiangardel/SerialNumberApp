@@ -10,6 +10,12 @@ import Cocoa
 import Combine
 #endif
 
+#if os(iOS)
+let storyboard = UIStoryboard(name: "StoryboardIos", bundle: nil)
+#elseif os(macOS)
+let storyboard = NSStoryboard(name: "Storyboardmacos", bundle: nil)
+#endif
+
 #if os(macOS)
 // Ajout d'une extension pour détecter les touches sur la vue
 struct KeyEventHandling: NSViewRepresentable {
@@ -241,7 +247,7 @@ struct SerialNumberListView: View {
             }
 #endif
         }
-        .edgesIgnoringSafeArea(.all)
+        //.edgesIgnoringSafeArea(.all)
     }
     
 #if os(iOS)
@@ -257,6 +263,9 @@ struct SerialNumberListView: View {
         // Vérifie les doublons
         if serialNumbers.contains(where: { $0.value == newSerialNumber }) {
             errorMessage = "Ce numéro de série existe déjà."
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                errorMessage = nil
+            }
             return
         }
 
@@ -338,6 +347,9 @@ struct SerialNumberListView: View {
                     }
                 } catch {
                     errorMessage = "Erreur lors de la sauvegarde du fichier CSV : \(error.localizedDescription)"
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        errorMessage = nil
+                    }
                 }
             }
         }
@@ -427,7 +439,7 @@ struct SerialNumberApp: App {
                 #if os(macOS)
                 .frame(minWidth: 500, minHeight: 300)
                 #else
-                .ignoresSafeArea()
+                //.ignoresSafeArea()
                 #endif
         }
         #if os(macOS)
